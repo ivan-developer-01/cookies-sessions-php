@@ -27,8 +27,16 @@ function getUsersList() {
 	return $usersList;
 }
 
-function existsUser() {
-	// ???
+function existsUser($login) {
+	$users = getUsersList();
+
+	foreach ($users as $user) {
+		if ($user['login'] == $login) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
 function checkPassword() {
