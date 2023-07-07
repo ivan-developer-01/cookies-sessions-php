@@ -1,3 +1,4 @@
+<?php
 function getUsersList() {
 	// ???
 }
@@ -13,3 +14,4 @@ function checkPassword() {
 function getCurrentUser() {
 	// ???
 }
+?>
