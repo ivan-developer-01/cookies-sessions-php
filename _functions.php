@@ -52,6 +52,6 @@ function checkPassword($login, $password) {
 }
 
 function getCurrentUser() {
-	// ???
+	// Will be implemented later.
 }
 ?>
