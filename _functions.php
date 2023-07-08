@@ -39,8 +39,16 @@ function existsUser($login) {
 	return false;
 }
 
-function checkPassword() {
-	// ???
+function checkPassword($login, $password) {
+	$users = getUsersList();
+
+	foreach ($users as $user) {
+		if ($user['login'] === $login && $user['password'] === sha1($password)) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
 function getCurrentUser() {
