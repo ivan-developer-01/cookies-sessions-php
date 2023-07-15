@@ -52,6 +52,7 @@ function checkPassword($login, $password) {
 }
 
 function getCurrentUser() {
-	// Will be implemented later.
+	session_start();
+	return $_SESSION['login'] ?? null;
 }
 ?>
