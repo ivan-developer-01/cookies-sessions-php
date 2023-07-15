@@ -30,15 +30,15 @@ if (null !== $username || null !== $password) {
 	<?php }
 }
 
-function displayLoginForm() { ?>
-	<form action="login.php" method="post">
-		<input name="login" type="text" placeholder="Логин">
-		<input name="password" type="password" placeholder="Пароль">
-		<input name="submit" type="submit" value="Войти">
-	</form>
-<?php }
+function displayLoginForm() {
+	echo '<form action="login.php" method="post">';
+	echo '<input name="login" type="text" placeholder="Логин" autofocus>';
+	echo '<input name="password" type="password" placeholder="Пароль">';
+	echo '<input name="submit" type="submit" value="Войти">';
+	echo '</form>';
+}
 
-displayLoginForm();
+// displayLoginForm();
 
 $auth = $_SESSION['auth'] ?? null;
 
